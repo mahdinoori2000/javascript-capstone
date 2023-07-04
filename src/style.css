@@ -53,3 +53,29 @@ body {
   padding-top: 0.2rem;
   margin: 0.2rem;
 }
+
+.footer-container {
+  background-color: #3c948b;
+  height: 15vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 0 1px 2px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 5%;
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+.footer-note {
+  color: #fff;
+  line-height: 20px;
+  font-weight: 700;
+}
