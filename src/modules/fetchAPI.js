@@ -1,12 +1,13 @@
-const baseUrl = 'https://api.tvmaze.com/search/shows?q=war';
-const container = document.querySelector('.container');
-const movieNum = document.getElementById('movie-number');
+const baseUrl = "https://api.tvmaze.com/search/shows?q=war";
+const container = document.querySelector(".container");
+const movieNum = document.getElementById("movie-number");
 
 export const fetchData = async () => {
   try {
     const response = await fetch(baseUrl);
     const data = await response.json();
-    const code = data.map((movie) => `
+    const code = data.map(
+      (movie) => `
     <ul class="movie" id="${movie.show.id}">
     <li class="overflow">
       <img src="${movie.show.image.original}" alt="girl picture" class="movie-img" />
@@ -17,11 +18,12 @@ export const fetchData = async () => {
   </li>
   <li><p class="likes">0 Likes</p></li> 
   <li class="comment-reservation">
-    <button class="comment-btn">Comment</button>
+    <button class="comment-btn" data-id="${movie.show.id}">Comment</button>
     <button class="reservation-btn">reservation</button>
   </li>
   </ul>
-    `);
+    `
+    );
     container.innerHTML = code;
     movieNum.innerHTML = data.length;
   } catch (error) {
