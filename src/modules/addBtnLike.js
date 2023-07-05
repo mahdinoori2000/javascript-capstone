@@ -25,3 +25,11 @@ async function getLikesByMovie(id) {
   const likes = itemLikes.find((item) => item.item_id === id);
   return likes ? likes.likes : 0;
 }
+export async function updateLikes() {
+  const likes = document.querySelectorAll('.likes');
+  await Promise.all(Array.from(likes).map(async (like) => {
+    const { id } = like.parentNode.parentNode;
+    const likes = await getLikesByMovie(id);
+    like.textContent = `${likes} Likes`;
+  }));
+}
