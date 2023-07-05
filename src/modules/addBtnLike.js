@@ -20,3 +20,8 @@ async function getLikes() {
     throw new Error('Error getting likes:', error);
   }
 }
+async function getLikesByMovie(id) {
+  await getLikes();
+  const likes = itemLikes.find((item) => item.item_id === id);
+  return likes ? likes.likes : 0;
+}
