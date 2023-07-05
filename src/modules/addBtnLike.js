@@ -1,0 +1,22 @@
+const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
+const appID = 'fvEG8bcfusuKIAC9Au4g';
+let itemLikes = [];
+
+async function getLikes() {
+  try {
+    const response = await fetch(`${baseURL}/${appID}/likes/`, {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json',
+      },
+    });
+
+    if (response.status === 200) {
+      itemLikes = await response.json();
+      return true;
+    }
+    return null;
+  } catch (error) {
+    throw new Error('Error getting likes:', error);
+  }
+}
