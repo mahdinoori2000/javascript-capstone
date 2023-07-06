@@ -1,3 +1,5 @@
+import { getComment } from './commentDisplay.js';
+import commentList from './commentList.js';
 import modalView from './modal.js';
 
 const fetchShowUrl = async (url) => {
@@ -9,9 +11,12 @@ const commentBtnEventListener = () => {
   commentBtn.forEach((button) => {
     button.addEventListener('click', async (e) => {
       const link = e.target.getAttribute('data-itemlink');
+
       const showToDisplay = fetchShowUrl(link);
-      showToDisplay.then((movie) => {
+      showToDisplay.then(async (movie) => {
         modalView(movie);
+        const comment = await getComment(movie.id);
+        commentList(comment);
       });
 
       const commentContainer = document.querySelector('.comment-container');
