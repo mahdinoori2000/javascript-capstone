@@ -1,6 +1,6 @@
-const baseUrl = "https://api.tvmaze.com/search/shows?q=war";
-const container = document.querySelector(".container");
-const movieNum = document.getElementById("movie-number");
+const baseUrl = 'https://api.tvmaze.com/search/shows?q=war';
+const container = document.querySelector('.container');
+const movieNum = document.getElementById('movie-number');
 
 export const fetchData = async () => {
   try {
@@ -23,7 +23,7 @@ export const fetchData = async () => {
     <button class="reservation-btn">reservation</button>
   </li>
   </ul>
-    `
+    `,
     );
     container.innerHTML = code;
     movieNum.innerHTML = data.length;

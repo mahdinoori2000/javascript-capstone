@@ -1,7 +1,7 @@
 const modalView = (movie) => {
-  const commentContainer = document.querySelector(".comment-container");
-  const commentContent = document.createElement("div");
-  commentContent.classList.add("comment-content");
+  const commentContainer = document.querySelector('.comment-container');
+  const commentContent = document.createElement('div');
+  commentContent.classList.add('comment-content');
   commentContent.innerHTML = `<span class="material-symbols-outlined close-modal">
                            close
                     </span>
@@ -20,11 +20,11 @@ const modalView = (movie) => {
          `;
   commentContainer.appendChild(commentContent);
 
-  const closeModalBtn = document.querySelector(".close-modal");
+  const closeModalBtn = document.querySelector('.close-modal');
   const closeModal = () => {
-    commentContainer.style.display = "none";
+    commentContainer.style.display = 'none';
   };
 
-  closeModalBtn.addEventListener("click", closeModal);
+  closeModalBtn.addEventListener('click', closeModal);
 };
 export default modalView;
