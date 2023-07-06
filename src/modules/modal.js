@@ -1,15 +1,14 @@
 import { commentBaseUrl } from "./api.js";
 import { getComment, postComment } from "./commentDisplay.js";
+// import close-modal from './close-modal.png'
 
 export const modalView = (movie) => {
   const commentContainer = document.querySelector(".comment-container");
   const commentContent = document.createElement("div");
   commentContent.classList.add("comment-content");
-  commentContent.innerHTML = `<img
-            src="../assets/close-modal.png"
-            alt="X"
-            class="close-modal"
-          />
+  commentContent.innerHTML = `<span class="material-symbols-outlined close-modal">
+                           close
+                    </span>
           <img src="${movie.image.original}" alt="movie-img" class="movie-img" />
           <h3 class="movie-names">${movie.name}</h3>
           <div class="features">
@@ -23,8 +22,14 @@ export const modalView = (movie) => {
             </div>
           </div>
          `;
-  // commentContent.innerHTML = `<p>test</p>`;
   commentContainer.appendChild(commentContent);
+
+  const closeModalBtn = document.querySelector(".close-modal");
+  const closeModal = () => {
+    commentContainer.style.display = "none";
+  };
+
+  closeModalBtn.addEventListener("click", closeModal);
 };
 
 // const form = document.querySelector(".comment-form");
