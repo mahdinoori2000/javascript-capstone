@@ -6,6 +6,7 @@ export const fetchData = async () => {
   try {
     const response = await fetch(baseUrl);
     const data = await response.json();
+    console.log(data);
     const code = data.map(
       (movie) => `
     <ul class="movie" id="${movie.show.id}">
@@ -18,7 +19,7 @@ export const fetchData = async () => {
   </li>
   <li><p class="likes">0 Likes</p></li> 
   <li class="comment-reservation">
-    <button class="comment-btn" data-id="${movie.show.id}">Comment</button>
+    <button class="comment-btn" data-id="${movie.show.id}" data-movie="${movie}" data-itemlink="${movie.show._links.self.href}">Comment</button>
     <button class="reservation-btn">reservation</button>
   </li>
   </ul>

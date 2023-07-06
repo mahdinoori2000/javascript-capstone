@@ -1,22 +1,29 @@
 import { commentBaseUrl } from "./api.js";
 
-const postComment = async (comment, id) => {
-  await fetch(commentBaseUrl + `apps/${id}/comments`, {
-    method: "POST",
-    body: JSON.stringify(comment),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+const postComment = async (comment) => {
+  try {
+    await fetch(commentBaseUrl, {
+      method: "POST",
+      body: JSON.stringify(comment),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
-const getComment = async (id) => {
+const getComment = async (e, id) => {
+  console.log(id);
   const params = {
     item_id: id,
   };
 
   const searchParams = new URLSearchParams(params);
-  const response = await fetch(commentBaseUrl + `comments?` + searchParams, {
+  const dataId = e.target.getAttribute("data-id");
+
+  const response = await fetch(commentBaseUrl + `?` + searchParams, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
