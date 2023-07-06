@@ -23,6 +23,7 @@ const modalView = (movie) => {
   const closeModalBtn = document.querySelector('.close-modal');
   const closeModal = () => {
     commentContainer.style.display = 'none';
+    commentContainer.innerHTML = '';
   };
 
   closeModalBtn.addEventListener('click', closeModal);

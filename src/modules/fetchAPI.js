@@ -1,8 +1,8 @@
 import { postLike, updateLikes } from './addBtnLike.js';
+import countItems from './counter.js';
 
 const baseURL = 'https://api.tvmaze.com/search/shows?q=war';
 const container = document.querySelector('.container');
-const movieNum = document.getElementById('movie-number');
 
 export async function fetchData() {
   try {
@@ -30,8 +30,7 @@ export async function fetchData() {
     );
 
     container.innerHTML = code;
-    movieNum.innerHTML = data.length;
-
+    countItems();
     const likeBtns = document.querySelectorAll('.like-btn');
     likeBtns.forEach((btn) => {
       btn.addEventListener('click', async () => {
