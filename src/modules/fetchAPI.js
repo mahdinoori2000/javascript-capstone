@@ -1,6 +1,6 @@
-const baseUrl = 'https://api.tvmaze.com/search/shows?q=war';
-const container = document.querySelector('.container');
-const movieNum = document.getElementById('movie-number');
+const baseUrl = "https://api.tvmaze.com/search/shows?q=war";
+const container = document.querySelector(".container");
+const movieNum = document.getElementById("movie-number");
 
 export const fetchData = async () => {
   try {
@@ -18,12 +18,12 @@ export const fetchData = async () => {
   </li>
   <li><p class="likes">0 Likes</p></li> 
   <li class="comment-reservation">
-  //  eslint no-underscore-dangle: 0 
+ 
     <button class="comment-btn" data-id="${movie.show.id}" data-movie="${movie}" data-itemlink="${movie.show._links.self.href}">Comment</button>
     <button class="reservation-btn">reservation</button>
   </li>
   </ul>
-    `,
+    `
     );
     container.innerHTML = code;
     movieNum.innerHTML = data.length;
