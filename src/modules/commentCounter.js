@@ -7,7 +7,7 @@ const countComments = async (id) => {
   const searchParams = new URLSearchParams(params);
   const response = await fetch(`${commentBaseUrl}comments?${searchParams}`);
   const result = await response.json();
-  return result.length;
+  return result;
 };
 
 export default countComments;
