@@ -9,7 +9,7 @@ const modalView = (movie) => {
   commentContent.innerHTML = `<span class="material-symbols-outlined close-modal">
                            close
                     </span>
-          <img src="${movie.image.original}" alt="movie-img" class="movie-img" />
+          <img src="${movie.image.original}" alt="movie-img" class="comment-movie-img" />
           <h3 class="movie-names">${movie.name}</h3>
           <div class="features">
             <div class="language-genre">
