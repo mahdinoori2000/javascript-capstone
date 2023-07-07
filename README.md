@@ -29,7 +29,7 @@
 
 # 📖 [Movie App] <a name="about-project"></a>
 
-**[Movie App]** is a website for the movie enthusiasts, customers can see the movies , they can like and comment on movies. All data is preserved thanks to [Involvement API](https://microverse.notion.site/Involvement-API-869e60b5ad104603aa6db59e08150270). This website is build by using JavaScript, Webpack and ES6.
+**[Movie App]** is a website for the movie enthusiasts, customers can see the movies , they can like and add comment on movies. All data is preserved thanks to [Involvement API](https://microverse.notion.site/Involvement-API-869e60b5ad104603aa6db59e08150270). This website is build by using JavaScript, Webpack and ES6.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -134,7 +134,8 @@ You can deploy this project using:
 👤 **Mahdi Noori**
 
 - GitHub: [@mahdinoori2000](https://github.com/mahdinoori2000)
-- Medium: [@mahdinoori2389](https://medium.com/@mahdinoori2389)
+- Twitter: [@mahdinoori2389](https://twitter.com/mahdinoori2000)
+- LinkedIn: [@mahdinoori2389](https://www.linkedin.com/in/mahdi-noori-4b4370270/)
 
 👤 **Hamza Ramalan**
 
