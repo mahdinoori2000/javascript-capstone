@@ -56,6 +56,7 @@
 >
 
 - [Live Demo](https://mahdinoori2000.github.io/javascript-capstone/)
+- [Video Presentation](https://drive.google.com/file/d/1nFzLxr_fC8PdezXLUcpdq7RETjkHTdnV/view?usp=drive_link)
 
 <!-- GETTING STARTED -->
 
