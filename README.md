@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-  <h2><b>Movie App</b></h2>
+  <h1><b>Movie App</b></h1>
 
 <!-- TABLE OF CONTENTS -->
 
